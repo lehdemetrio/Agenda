@@ -118,4 +118,26 @@ namespace Agenda
 
   }
     }
+
+class Program
+  {
+    static void Main(string[] args)
+    {
+      //Criamos um arrayList para guarda Nome, Endereco e Telefone
+      List<Agenda> _agendaTelefonicaList = new List<Agenda>();
+
+      //Preenchendo arrayList
+      _agendaTelefonicaList.Add(new Agenda("Junior", "Rua Candido", "8989-8989"));
+      _agendaTelefonicaList.Add(new Agenda("Alex", "Rua Heli Costa", "1111-5245"));
+      _agendaTelefonicaList.Add(new Agenda("Rodrigo", "Rua Otavio", "6565-878"));
+
+      //Carregando menu principal
+      Metodos.CarregarMenuPrincipal();
+
+      //Guarda o valor digitado pelo usuario
+      string _menu = Console.ReadLine().ToString();
+
+      //Realiza ação de acorodo com a opção escolhida pelo usuario
+      Metodos.MenuOpcoes(_agendaTelefonicaList, _menu);
+    }
 }
