@@ -5,13 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Collections;
 
-namespace Calculadora
+namespace Agenda
 {
-    class Program
+    public class Agenda
+  {
+    public string Nome { get; set; }
+    public string Endereco { get; set; }
+    public string Telefone { get; set; }
+
+    //Construtor
+    public Agenda(string _nome, string _endereco, string _telfone)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+      this.Nome = _nome;
+      this.Endereco = _endereco;
+      this.Telefone = _telfone;
     }
+  }
 }
