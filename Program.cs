@@ -73,4 +73,35 @@ namespace Agenda
       Metodos.MenuOpcoes(_agendaTelefonicaList, _menu);
     }
      }
+    
+    public static void MenuOpcoes(List<Agenda> _agendaTelefonicaList, string _menu)
+    {
+      switch (_menu)
+      {
+        case "1":
+          //Vizualizando agenda
+          Metodos.VizualizarAgenda(_agendaTelefonicaList);
+          break;
+
+        case "2":
+          Console.WriteLine("Digite o nome da pessoa.");
+          string _nome = Console.ReadLine();
+          Console.WriteLine();
+          Console.WriteLine("Digite o endereço da pessoa.");
+          string _endereco = Console.ReadLine();
+          Console.WriteLine();
+          Console.WriteLine("Digite o telefone da pessoa.");
+          string _telefone = Console.ReadLine();
+          Console.WriteLine();
+          Console.WriteLine("Pessoa inserida com sucesso");
+
+          Metodos.InserirPessoaAgenda(_agendaTelefonicaList, new Agenda(_nome, _endereco, _telefone));
+
+          break;
+
+        default:
+
+          break;
+      }
+    }
 }
