@@ -48,6 +48,29 @@ namespace Agenda
       Metodos.MenuOpcoes(_agendaTelefonicaList, _menu);
     }
          
-         
+           public static void VizualizarAgenda(List<Agenda> _agendaTelefonicaList)
+    {
+      Console.WriteLine();
+      Console.WriteLine("ID\t\tNome\t\tEndereco\t\tTelefone");
+
+      for (int i = 0; i < _agendaTelefonicaList.Count; i++)
+      {
+
+        Console.WriteLine("{0}\t\t{1}\t\t{2}\t\t{3}",
+        i,
+        _agendaTelefonicaList[i].Nome,
+        _agendaTelefonicaList[i].Endereco,
+        _agendaTelefonicaList[i].Telefone);
+      }
+
+      //Carregando menu principal
+      Metodos.CarregarMenuPrincipal();
+
+      //Recuperando menu digitado pela pessoa
+      string _menu = Console.ReadLine().ToString();
+
+      //Carregando menu correspodente
+      Metodos.MenuOpcoes(_agendaTelefonicaList, _menu);
+    }
      }
 }
