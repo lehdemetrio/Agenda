@@ -103,5 +103,19 @@ namespace Agenda
 
           break;
       }
+        
+        public static void CarregarMenuPrincipal()
+    {
+      Console.WriteLine();
+      Console.WriteLine();
+      Console.WriteLine("Escolha a operação a ser realizada\n" +
+                        "1 - Vizualizar agenda\n" +
+                        "2 - Inserir registro na agenda\n" +
+                        "3 - Alterar registro da agendar\n" +
+                        "4 - Excluir registro da agendar\n" +
+                        "5 - Fechar aplicão");
+    }
+
+  }
     }
 }
